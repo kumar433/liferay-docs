@@ -98,7 +98,7 @@ services, use the following steps:
                         String email, String message, ServiceContext serviceContext)
                         throws PortalException, SystemException {
 
-                GuestbookModelPermission.check(getPermissionChecker(),
+                EntryModelPermission.check(getPermissionChecker(),
                                 serviceContext.getScopeGroupId(), ActionKeys.ADD_ENTRY);
 
                 return EntryLocalServiceUtil.addEntry(userId, guestbookId, name, email,
